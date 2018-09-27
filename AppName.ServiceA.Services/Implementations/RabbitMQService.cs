@@ -26,6 +26,8 @@ namespace AppName.ServiceA.Services.Implementations
 
         public void PublishMessage(string serializedMessage)
         {
+            if(string.IsNullOrWhiteSpace(serializedMessage)) throw new ArgumentNullException(nameof(serializedMessage));
+
             _channel.ExchangeDeclare(exchange: _rabbitMqOptions.NameMessageExchangeName, type: ExchangeType.Direct);
             _channel.QueueDeclare(queue: _rabbitMqOptions.NameMessageQueueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
             _channel.QueueBind(queue: _rabbitMqOptions.NameMessageQueueName, exchange: _rabbitMqOptions.NameMessageExchangeName, routingKey: "");

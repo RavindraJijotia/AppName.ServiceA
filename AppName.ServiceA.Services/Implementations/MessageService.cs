@@ -1,4 +1,5 @@
-﻿using AppName.ServiceA.Messages;
+﻿using System;
+using AppName.ServiceA.Messages;
 using AppName.ServiceA.Models;
 using AppName.ServiceA.Services.Interfaces;
 using Newtonsoft.Json;
@@ -16,6 +17,8 @@ namespace AppName.ServiceA.Services.Implementations
 
         public void SendMessage(INameMessage nameMessage)
         {
+            if(nameMessage == null) throw new ArgumentNullException(nameof(nameMessage));
+
             var objNameMessage = new NameMessage
             {
                 Message = nameMessage.Message
