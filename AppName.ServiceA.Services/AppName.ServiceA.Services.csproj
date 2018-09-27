@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MassTransit" Version="5.1.5.1635-develop" />
-    <PackageReference Include="MassTransit.RabbitMQ" Version="5.1.5.1635-develop" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.0.0-pre2" />
   </ItemGroup>
 
   <ItemGroup>
