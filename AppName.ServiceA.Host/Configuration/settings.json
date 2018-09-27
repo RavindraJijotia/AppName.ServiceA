@@ -1,0 +1,11 @@
+{
+  "RabbitMQConfiguration": {
+    "HostName": "localhost",
+    "Port": 5672,
+    "UserName": "guest",
+    "Password": "guest",
+    "JsonMimeType": "application/json",
+    "NameMessageExchangeName": "AppName.Service.NameMessageExchange",
+    "NameMessageQueueName": "AppName.Service.NameMessageQueue"
+  }
+}

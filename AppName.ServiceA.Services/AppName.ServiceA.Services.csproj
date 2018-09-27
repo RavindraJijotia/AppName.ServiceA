@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="5.1.5.1635-develop" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="5.1.5.1635-develop" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AppName.ServiceA.Messages\AppName.ServiceA.Messages.csproj" />
+    <ProjectReference Include="..\AppName.ServiceA.Models\AppName.ServiceA.Models.csproj" />
+  </ItemGroup>
+
+</Project>
